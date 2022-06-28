@@ -1,0 +1,85 @@
+Step 1:
+Generate GitHub personal access token
+setting----Developer settings--Personal access tokens--Generate new token
+    check mark: repo
+
+Step 2: Fork the repository
+
+Step 3: Clone the forked repository
+In the list of the forked repository, click "Code" button
+  HTTP ----url link
+ 
+ Open a terminal
+    export ORIGIN=<your repository HTTPS URL>
+    git clone $ORIGIN
+   
+Step 4: Explore the cloned repo  
+
+Step 5:Create a new branch
+1.Navigate the repository using:
+  cd gkpbt-css-circle
+2.git checkout -b feature-circle-500
+-b : creates the branch if it does not already exist
+3. git status : check current status how many branches we have and which branch are we at
+
+Step 6: Make required code changes  (do what you need to do)
+After we finished all the modinication , code below we can type in the terminal to review what we have done to the source code
+git status: shows what have been changed
+git diff: see the changes in more detail.
+ctrl+z: quit currently running code , redo?
+
+Step 7: Add and commit changes
+1. ADD
+git add .   :  git add   command has several options.   
+the single dot .  adds all untracked files in the current directory andsubdirectories to the staging area.
+git add style.css: add the single file you created 
+git add -A: recursively add all files from the top level git folder.
+
+2. Commit: To commit the new file to the local repository, you need to first tell git who you are.
+Set email:
+git config --global user.email dldlqqas@hotmail.com
+Set your name:
+git config --global user.name Guan Liu
+
+add comment:  
+git commit -sm "Changing the height and the width of the circle"
+
+
+Step 8: Merge your branch back into main branch
+1.git checkout main: switch back to main branch,  * shows which branch you are running
+2.Merge the "branch into main"
+git merge "branch name"
+3.git log: confirm the changes was merged
+git log --oneline: this displays logs more concisely
+
+
+Step 9: Delete the "" branch (since we already merged changes to "Main" branch)
+1.Ensure you are on the main branch
+git checkout main:  make sure we are at main
+2. Delete side branche
+git branch -d "branch name"
+
+3. confirm that the branch was deleted by listing all branches
+git branch
+
+
+Step 10: Push your changes to origin
+1.In the Terminal window, run:
+git push origin main
+  then
+  use the user name: git hub username or github email address(may work?)
+  password: Step 1 token
+  
+
+Step 11: Create a pull request
+The final step is to request that the original project pull in the changes you've made to your fork. To merge your changes to the original repository, you need to create a pull request.
+
+1. Ensure you are on the "Code" tab. Click on the "Contribute: button and then on Open pull request.
+
+2."Comparing changes"
+
+3.Open pull request
+
+
+Works done, good job Guan! :>
+
